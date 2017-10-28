@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg'
 gem 'dotenv-rails'
 gem 'annotate'
+
+# Gem for scraping
+gem 'nokogiri'
