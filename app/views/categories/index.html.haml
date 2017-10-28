@@ -1,0 +1,15 @@
+.flexbox
+    .recipes-sidebar
+        = render 'recipes_sidebar'
+
+    .recipes-content
+        %h2
+            カテゴリからレシピを探す
+
+        .category-boxes
+            - @categories.each do |category|
+                =link_to(category_url(category)) do
+                    .category-box
+                        .category-name= category.name
+                        -# あとでもらう
+                        -# %img{src: "/public/carousel_a99ba828b4eb8ed8b6560e2f0011c68f.jpg"}

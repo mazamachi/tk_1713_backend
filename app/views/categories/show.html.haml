@@ -1,0 +1,23 @@
+.flexbox
+    .recipes-sidebar
+        = render 'recipes_sidebar'
+
+    .recipes-right
+        .recipes-navbar
+            %ul.navs
+                %li.nav
+                    TOP
+                %li.nav
+                    = @category.name
+        .recipes-content
+
+            %h2
+                = @category.name
+
+            .recipe-boxes
+                - @category.recipes.each do |recipe|
+                    =link_to('#') do
+                        .recipe-box
+                            %img{src: "/public/carousel_a99ba828b4eb8ed8b6560e2f0011c68f.jpg"}
+                            .recipe-name
+                                = recipe.name
