@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028052314) do
+ActiveRecord::Schema.define(version: 20171028111223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cooking_processes", force: :cascade do |t|
     t.integer "step"
@@ -32,6 +38,16 @@ ActiveRecord::Schema.define(version: 20171028052314) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "creates", force: :cascade do |t|
+    t.string "recipe_tag"
+    t.bigint "recipe_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_creates_on_recipe_id"
+    t.index ["tag_id"], name: "index_creates_on_tag_id"
   end
 
   create_table "foods", force: :cascade do |t|
@@ -55,6 +71,9 @@ ActiveRecord::Schema.define(version: 20171028052314) do
     t.bigint "food_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "unit"
+    t.string "serving_name"
+    t.string "amount_name"
     t.index ["food_id"], name: "index_recipe_foods_on_food_id"
     t.index ["recipe_id"], name: "index_recipe_foods_on_recipe_id"
   end
@@ -64,6 +83,10 @@ ActiveRecord::Schema.define(version: 20171028052314) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.string "movie_url"
+    t.string "original_id"
+    t.index ["category_id"], name: "index_recipes_on_category_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -72,7 +95,10 @@ ActiveRecord::Schema.define(version: 20171028052314) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "creates", "recipes"
+  add_foreign_key "creates", "tags"
   add_foreign_key "movies", "recipes"
   add_foreign_key "recipe_foods", "foods"
   add_foreign_key "recipe_foods", "recipes"
+  add_foreign_key "recipes", "categories"
 end
