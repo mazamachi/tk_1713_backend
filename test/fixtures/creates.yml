@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recipe_tag: MyString
+  recipe: one
+  tag: one
+
+two:
+  recipe_tag: MyString
+  recipe: two
+  tag: two

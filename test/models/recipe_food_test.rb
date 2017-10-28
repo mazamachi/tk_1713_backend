@@ -1,16 +1,19 @@
 # == Schema Information
 #
-# Table name: tags
+# Table name: recipe_foods
 #
 #  id         :integer          not null, primary key
-#  name       :string
+#  amount     :float
+#  servings   :integer
+#  recipe_id  :integer
+#  food_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class TagTest < ActiveSupport::TestCase
+class RecipeFoodTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
