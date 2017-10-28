@@ -61,3 +61,7 @@ gem 'pry-rails'
 # Gem for scraping
 gem 'nokogiri'
 gem 'poltergeist'
+
+gem 'haml'
+# gem 'erb2haml'
+gem 'haml-rails'
