@@ -1,12 +1,14 @@
 # == Schema Information
 #
-# Table name: tags
+# Table name: movies
 #
 #  id         :integer          not null, primary key
-#  name       :string
+#  url        :string
+#  recipe_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Tag < ApplicationRecord
+class Movie < ApplicationRecord
+  belongs_to :recipe
 end

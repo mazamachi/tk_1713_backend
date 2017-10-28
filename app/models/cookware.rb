@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: tags
+# Table name: cookwares
 #
 #  id         :integer          not null, primary key
 #  name       :string
@@ -8,5 +8,5 @@
 #  updated_at :datetime         not null
 #
 
-class Tag < ApplicationRecord
+class Cookware < ApplicationRecord
 end
