@@ -9,5 +9,5 @@
         .category-boxes
             - @categories.each do |category|
                 =link_to(category_url(category)) do
-                    .category-box
+                    .category-box{:style => "background-image: url('/assets/categories/#{category.id}.jpeg')"}
                         .category-name= category.name
