@@ -31,53 +31,62 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-        .movie-box {
-            width: 650px;
-            height: 650px;
-        }
+    .movie-box {
+        position: relative;
+        width: 650px;
+        height: 650px;
+    }
 
-        .button-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 650px;
-            height: 200;
-        }
+    .movie {
+        position: absolute;
+        width: 650px;
+        height: 650px;
+        color: #555555;
+        z-index: 99;
+    }
 
-        #rectangle {
-            width: 480px;
-            height: 129px;
-            border-radius: 4px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-        }
+    .button-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 650px;
+        height: 200;
+    }
 
-        .circle {
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            width: 60px;
-            height: 60px;
-            -webkit-border-radius: 25px;/* width,heightの半分 */
-            -moz-border-radius: 25px;
-            border-radius: 25px;
-            background-color: #e87161;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-        }
+    #rectangle {
+        width: 480px;
+        height: 129px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    }
 
-        .trianglel{
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 10px 20px 10px 0;
-            border-color: transparent #ffffff transparent transparent;
-        }
-        .triangler{
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 10px 0 10px 20px;
-            border-color: transparent transparent transparent #ffffff;
-        }
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 60px;
+        height: 60px;
+        -webkit-border-radius: 25px;/* width,heightの半分 */
+        -moz-border-radius: 25px;
+        border-radius: 25px;
+        background-color: #e87161;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .trianglel{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 20px 10px 0;
+        border-color: transparent #ffffff transparent transparent;
+    }
+    .triangler{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 20px;
+        border-color: transparent transparent transparent #ffffff;
+    }
 
 }
