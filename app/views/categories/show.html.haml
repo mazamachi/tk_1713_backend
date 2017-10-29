@@ -6,7 +6,7 @@
         .recipes-navbar
             %ul.navs
                 %li.nav
-                    TOP
+                    =link_to("TOP", categories_url())
                 %li.nav
                     = @category.name
         .recipes-content
@@ -16,8 +16,8 @@
 
             .recipe-boxes
                 - @category.recipes.each do |recipe|
-                    =link_to('#') do
+                    =link_to(recipe_url(recipe)) do
                         .recipe-box
-                            %img{src: "/public/carousel_a99ba828b4eb8ed8b6560e2f0011c68f.jpg"}
+                            %img.recipe-thumbnail{src: "/assets/carousel_a99ba828b4eb8ed8b6560e2f0011c68f.jpg"}
                             .recipe-name
                                 = recipe.name
