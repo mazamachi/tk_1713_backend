@@ -91,3 +91,49 @@
     }
 
 }
+
+.recipie-left {
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+    overflow: hidden;
+    background-color: #3c3c3c;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+body {
+    height: 100%; /* 要素を超えた分の背景が伸びないブラウザ用 */
+}
+
+.recipie-left ul {
+    padding-top: 90px;
+    padding-left: 0px;
+    padding-right: 0px;
+    list-style: none;
+}
+.recipie-left ul li {
+    width: 384px;
+    height: 72px;
+    border-radius: 4px;
+    background-color: #636363;
+    color: #000;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+
+    position: relative;
+    margin: 50px auto;
+    font-size: 18px;
+    line-height: 72px;
+    transition: 0.3s;
+
+    text-align: center;
+}
+.recipie-left ul li.selected {
+    background-color: #e87161;
+    color: #fff;
+}
+.recipie-left ul li.selected:hover {
+    background: #F6A38B;
+    color: #fff;
+}
+.recipie-left ul li:hover {
+    background: #737373;
+}
