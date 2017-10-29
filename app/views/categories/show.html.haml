@@ -18,6 +18,6 @@
                 - @category.recipes.each do |recipe|
                     =link_to(recipe_url(recipe)) do
                         .recipe-box
-                            %img.recipe-thumbnail{src: "/assets/carousel_a99ba828b4eb8ed8b6560e2f0011c68f.jpg"}
+                            %img.recipe-thumbnail{:src => recipe.movie_url.gsub("m3u8", "jpg")}
                             .recipe-name
                                 = recipe.name
